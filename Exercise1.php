@@ -11,10 +11,10 @@
         <h1>Weather Report</h1>
 
         <?php
-            // Weather conditions definition
+            //Weather Conditiosn definition
             $weatherConditions = ["rain", "sunshine", "clouds", "hail", "sleet", "snow", "wind"];
 
-            // Output the weather report directly
+            //Output
             echo "<p>We've seen all kinds of weather this month. At the beginning of the month, we had 
                 <b>{$weatherConditions[5]}</b> and <b>{$weatherConditions[6]}</b>. Then came <b>{$weatherConditions[1]}</b> with a few 
                 <b>{$weatherConditions[2]}</b> and some <b>{$weatherConditions[0]}</b>. At least we didn't get any 
