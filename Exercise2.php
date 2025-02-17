@@ -11,9 +11,14 @@
         <h1>Largest Cities in the World</h1>
 
         <?php
-            //sort and print function
-            function sortAndPrintCities($cities) {
+            //Sort cities function
+            function sortCities($cities) {
                 sort($cities); // Sort the cities alphabetically
+                return $cities;
+            }
+
+            //Print cities function
+            function printCities($cities) {
                 echo "<ul>";
                 foreach ($cities as $city) {
                     echo "<li>$city</li>";
@@ -40,15 +45,17 @@
 
             //Sort and print the list of cities
             echo "<p>Sorted List of Cities:</p>";
-            sortAndPrintCities($cities);  // Using the function to sort and print
+            $cities = sortCities($cities);
+            printCities($cities);
 
             //Add 4 more cities
             $newCities = ["Los Angeles", "Calcutta", "Osaka", "Beijing"];
-            $cities = array_merge($cities, $newCities);  // Adding new cities
+            $cities = array_merge($cities, $newCities);  
 
             //Sort and print again the updated list
             echo "<p>Updated List After Adding More Cities:</p>";
-            sortAndPrintCities($cities);  // Using the function again
+            $cities = sortCities($cities);  
+            printCities($cities);  
         ?>
     </div>
 </body>
